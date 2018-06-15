@@ -1,4 +1,6 @@
 # HTU2xD(F) Generic C Driver
+Forked from https://github.com/TEConnectivity/HTU21D_Generic_C_Driver
+
 Generic C driver for the [HTU2xD(F) sensor](http://www.te.com/usa-en/product-CAT-HSC0004.html)
 
 ![htu21d](http://www.te.com/content/dam/te-com/catalog/part/CAT/HSC/000/CAT-HSC0004-t1.jpg/jcr:content/renditions/product-details.png)
