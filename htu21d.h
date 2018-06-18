@@ -13,6 +13,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <math.h>
+#include "esp32_i2c_utils.h"
 
 // Enums
 enum htu21_i2c_master_mode {
@@ -43,6 +44,30 @@ enum htu21_heater_status {
 	htu21_heater_off,
 	htu21_heater_on
 };
+
+enum i2c_transfer_direction {
+    I2C_TRANSFER_WRITE = 0,
+    I2C_TRANSFER_READ = 1,
+};
+
+enum status_code {
+    STATUS_OK = 0x00,
+    STATUS_ERR_OVERFLOW = 0x01,
+    STATUS_ERR_TIMEOUT = 0x02,
+};
+
+struct i2c_master_packet {
+    // Address to slave device
+    uint16_t address;
+    // Length of data array
+    uint16_t data_length;
+    // Data array containing all data to be transferred
+    uint8_t *data;
+};
+
+void i2c_master_init(void);
+
+//void delay_ms(int ms);
 
 // Functions
 
